@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "codeToken": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "codeToken",
+    "code"
+  ],
+  "additionalProperties": false
+}

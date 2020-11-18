@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "properties": {
+    "nickname": {
+      "type": "string",
+      "pattern": "^[0-9a-zA-Z!_가-힣]{4,20}$"
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["male", "female"]
+    },
+    "birth": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^01([016789]?)([0-9]{3,4})([0-9]{4})$"
+    },
+    "isMarried": {
+      "type": "boolean"
+    },
+    "cityId": {
+      "type": "integer"
+    }
+  },
+  "required": [
+  ],
+  "additionalProperties": false
+}

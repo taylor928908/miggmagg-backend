@@ -1,0 +1,67 @@
+version: '3.7'
+services:
+  backend:
+    image: 731176863212.dkr.ecr.ap-northeast-2.amazonaws.com/teentory-backend:latest
+    environment:
+      - NODE_ENV=production
+    networks:
+      - inbound
+      - backend
+    logging:
+      driver: json-file
+      options:
+        max-file: '10'
+        max-size: '100m'
+    deploy:
+      mode: replicated
+      replicas: 2
+      update_config:
+        parallelism: 1
+        delay: 10s
+      labels:
+        - traefik.enable=true
+        - traefik.docker.lbswarm=true
+        - traefik.docker.network=inbound
+        - traefik.http.routers.teentory-backend.rule=Host(`api.jigkulife.com`)
+        - traefik.http.routers.teentory-backend.entrypoints=websecure
+        - traefik.http.routers.teentory-backend.tls=true
+        - traefik.http.routers.teentory-backend.tls.certresolver=teentory
+        - traefik.http.services.teentory-backend-service.loadbalancer.server.port=4000
+
+#  admin:
+#    image: 731176863212.dkr.ecr.ap-northeast-2.amazonaws.com/teentory-admin:latest
+#    networks:
+#      - inbound
+#    deploy:
+#      mode: replicated
+#      replicas: 2
+#      update_config:
+#        parallelism: 1
+#        delay: 10s
+#      labels:
+#        - traefik.enable=true
+#        - traefik.docker.lbswarm=true
+#        - traefik.docker.network=inbound
+#
+#        - traefik.http.routers.teentory-admin.rule=Host(`admin.jigkulife.com`)
+#        - traefik.http.routers.teentory-admin.entrypoints=web
+#        - traefik.http.routers.teentory-admin.middlewares=teentory-admin-redirect
+#
+#        - traefik.http.routers.teentory-admin-secured.rule=Host(`admin.jigkulife.com`)
+#        - traefik.http.routers.teentory-admin-secured.entrypoints=websecure
+#        - traefik.http.routers.teentory-admin-secured.tls=true
+#        - traefik.http.routers.teentory-admin-secured.tls.certresolver=teentory
+#
+#        - traefik.http.middlewares.teentory-admin-redirect.redirectscheme.scheme=https
+#        - traefik.http.middlewares.teentory-admin-redirect.redirectscheme.permanent=true
+#
+#        - traefik.http.services.teentory-admin-service.loadbalancer.server.port=5000
+
+networks:
+  inbound:
+    external: true
+    name: inbound
+
+  backend:
+    external: true
+    name: backend

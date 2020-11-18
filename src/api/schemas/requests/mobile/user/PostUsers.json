@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "nickname": {
+      "type": "string",
+      "pattern": "^[0-9a-zA-Z!_가-힣]{4,20}$"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "password": {
+      "type": "string",
+      "pattern": "^[0-9a-zA-Z]{8,14}$"
+    },
+    "cityId": {
+      "type": "integer"
+    },
+    "categoryIds": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "isMarried": {
+      "type": "boolean"
+    },
+    "referralCode": {
+      "type": "string"
+    },
+    "impUid": {
+      "type": "string"
+    },
+    "isMarketing": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "nickname",
+    "email",
+    "password",
+    "impUid",
+    "isMarketing"
+  ],
+  "additionalProperties": false
+}

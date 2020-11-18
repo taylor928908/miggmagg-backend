@@ -1,0 +1,92 @@
+{
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "address": {
+            "type": "object",
+            "properties": {
+              "address": {
+                "type": "string"
+              },
+              "detail": {
+                "type": "string"
+              }
+            }
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "distance": {
+            "type": "number"
+          },
+          "missionCount": {
+            "type": "integer"
+          },
+          "obtainablePoint": {
+            "type": "integer"
+          },
+          "isLike": {
+            "type": "boolean"
+          },
+          "star": {
+            "type": "number"
+          },
+          "isMission": {
+            "type": "boolean"
+          },
+          "location": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "address",
+          "images",
+          "createdAt",
+          "distance",
+          "missionCount",
+          "obtainablePoint",
+          "isLike",
+          "isMission",
+          "star",
+          "location"
+        ]
+      }
+    },
+    "total": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "data",
+    "total"
+  ],
+  "additionalProperties": false
+}

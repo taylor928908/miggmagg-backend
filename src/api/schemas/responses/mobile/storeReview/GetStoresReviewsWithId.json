@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "contents": {
+      "type": "string"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "videos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "userId": {
+      "type": "integer"
+    },
+    "storeId": {
+      "type": "integer"
+    },
+    "star": {
+      "type": "integer",
+      "maxLength": 5
+    },
+    "parentId": {
+      "type": "integer",
+      "nullable": true
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "nickname": {
+      "type": "string",
+      "nullable": true
+    }
+  },
+  "required": ["id", "contents", "images", "videos", "userId", "storeId", "star", "parentId", "createdAt", "nickname"],
+  "additionalProperties": false
+}

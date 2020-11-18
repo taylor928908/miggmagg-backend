@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "phoneToken": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

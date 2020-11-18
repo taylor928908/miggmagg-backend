@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "lat": {
+      "type": "number"
+    },
+    "lon": {
+      "type": "number"
+    },
+    "distance": {
+      "type": "integer"
+    },
+    "categoryId": {
+      "type": "integer"
+    },
+    "orderBy": {
+      "type": "string",
+      "enum": ["distance", "point", "register", "review"]
+    }
+  },
+  "required": [
+    "lat",
+    "lon",
+    "distance",
+    "orderBy"
+  ],
+  "additionalProperties": false
+}

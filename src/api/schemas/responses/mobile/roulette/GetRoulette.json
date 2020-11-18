@@ -1,0 +1,23 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "type": {
+        "type": "string",
+        "enum": ["point"]
+      },
+      "point": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "id",
+      "type"
+    ],
+    "additionalProperties": false
+  }
+}

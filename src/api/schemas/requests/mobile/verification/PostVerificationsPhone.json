@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": ["resetPassword", "findId", "changePhone"]
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^01([016789]?)([0-9]{3,4})([0-9]{4})$"
+    }
+  },
+  "required": [
+    "phone"
+  ],
+  "additionalProperties": false
+}

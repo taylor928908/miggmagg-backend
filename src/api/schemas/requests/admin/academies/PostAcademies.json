@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "logoUrl": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "unitPrice": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "tel": {
+      "type": "string",
+      "pattern": "^[0-9]{8,11}$"
+    },
+    "masterEmail": {
+      "type": "string",
+      "format": "email"
+    },
+    "masterName": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "masterNickname": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "masterPassword": {
+      "type": "string",
+      "pattern": "^[0-9a-zA-Z!@#$%^&*()?+-_~=\/]{6,40}$"
+    }
+  },
+  "required": [
+    "name",
+    "unitPrice",
+    "tel",
+    "masterEmail",
+    "masterName",
+    "masterNickname",
+    "masterPassword"
+  ],
+  "additionalProperties": false
+}

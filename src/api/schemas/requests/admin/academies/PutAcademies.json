@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "logoUrl": {
+      "type": "string",
+      "format": "uri-reference"
+    },
+    "unitPrice": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "tel": {
+      "type": "string",
+      "pattern": "^[0-9]{8,11}$"
+    }
+  },
+  "required": [
+    "name",
+    "unitPrice",
+    "tel"
+  ],
+  "additionalProperties": false
+}

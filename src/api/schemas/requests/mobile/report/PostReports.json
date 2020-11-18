@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "target": {
+      "type": "string",
+      "enum": ["store", "userId"]
+    },
+    "type": {
+      "type": "string",
+      "enum": ["inappropriate"]
+    },
+    "content": {
+      "type": "object",
+      "properties": {
+        "storeId": {
+          "type": "integer"
+        },
+        "userId": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "required": [
+    "target",
+    "type",
+    "content"
+  ],
+  "additionalProperties": false
+}

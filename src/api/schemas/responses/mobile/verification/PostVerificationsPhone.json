@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "codeToken": {
+      "type": "string"
+    },
+    "expireAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "code": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "codeToken",
+    "expireAt"
+  ],
+  "additionalProperties": false
+}

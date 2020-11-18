@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "storeId": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "price",
+    "images",
+    "storeId",
+    "status"
+  ],
+  "additionalProperties": false
+}

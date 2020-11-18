@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "impUid": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "impUid"
+  ],
+  "additionalProperties": false
+}

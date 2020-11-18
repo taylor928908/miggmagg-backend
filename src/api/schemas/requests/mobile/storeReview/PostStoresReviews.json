@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "contents": {
+      "type": "string",
+      "maxLength": 600
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "videos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "storeId": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "star": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    }
+  },
+  "required": [
+    "contents",
+    "storeId",
+    "star"
+  ],
+  "additionalProperties": false
+}

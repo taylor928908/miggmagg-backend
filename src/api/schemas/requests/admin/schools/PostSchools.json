@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "builtType": {
+      "type": "string",
+      "enum": ["public", "private"]
+    },
+    "schoolType": {
+    "type": "string",
+    "enum": ["elementary", "middle", "high"]
+  },
+    "name": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "address": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "addressOld": {
+      "type": "string",
+      "maxLength": 100
+    }
+  },
+  "required": ["builtType", "schoolType", "name", "address", "addressOld"],
+  "additionalProperties": false
+}

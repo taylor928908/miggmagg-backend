@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "nickname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "referralCode": {
+      "type": "string"
+    },
+    "point": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["male", "female"]
+    },
+    "birth": {
+      "type": "string",
+      "format": "date"
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^01([016789]?)([0-9]{3,4})([0-9]{4})$"
+    }
+  },
+  "required": [
+    "id",
+    "nickname",
+    "email",
+    "referralCode",
+    "point",
+    "gender",
+    "birth",
+    "phone"
+  ],
+  "additionalProperties": false
+}
